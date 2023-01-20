@@ -1,0 +1,59 @@
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+
+body {
+    background: url(https://source.unsplash.com/random) no-repeat center center/cover;
+    width: auto;
+    height: auto;
+}
+
+.container {
+    width: 350px;
+    height: 350px;
+    background-color: rgba(200, 210, 210, 0.603);
+    backdrop-filter: blur(5px);
+    margin: auto;
+    margin-top: 150px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 25px;
+}
+
+.paddingEu {
+    padding-top: 110px;
+}
+
+.paddingFr {
+    display: flex;
+}
+
+.paddingFr {
+    opacity: 0.8;
+
+}
+
+
+.paddingFr:label {
+font-size: 15px;
+}
+
+#deviseFr {
+    height: 20px;
+    width: 70px;
+    margin: auto;
+}
+
+input {
+    margin-top: 20px;
+}
+
+#convert {
+font-size: 18px;
+}
+
+
