@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>JS exo 5</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <form method="post" action="">
+
+            <div>
+                <p class="paddingEu">
+                    <label for="deviseEu">Valeur en euros</label>
+                    <input id="deviseEu" style="height:25px" type="number" name="valeur" placeholder="Euros" size="40"
+                        maxlength="30" />
+                </p>
+                <div class="paddingFr">
+                    <label for="deviseFr"></label>
+                    <input id="deviseFr" type="number" name="valeur" placeholder=" francs" maxlength="10" />
+                </div>
+            </div>
+    </div>
+
+
+    </form>
+
+
+
+
+    <script>
+
+        "use strict";
+        window.addEventListener("DOMContentLoaded", (event) => {
+            const change = 6.55957;
+            const deviseFr = document.getElementById('deviseFr');
+            const deviseEu = document.getElementById('deviseEu');
+
+            deviseFr.addEventListener('input', function () { //Ajout de l'event input a deviseFR
+                let franc = parseFloat(this.value.trim()); //La fonction parseFloat() permet de transformer une chaîne de caractères en un nombre flottant après avoir analysée celle-ci 
+                let euro = parseFloat(franc / change); //La fonction parseFloat() permet de transformer une chaîne de caractères en un nombre flottant après avoir analysée celle-ci 
+                //deviseFr.value = franc.toFixed(2);
+                deviseEu.value = euro.toFixed(2); //toFixed pour arrondir 2 décimales 
+            });
+
+            deviseEu.addEventListener('input', function () {
+                let euro = parseFloat(this.value.trim());
+                let franc = parseFloat(euro * change);
+                deviseFr.value = franc.toFixed(2);
+                //deviseEu.value = euro.toFixed(2);
+            });
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
