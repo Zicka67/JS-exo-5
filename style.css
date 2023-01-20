@@ -30,11 +30,13 @@ body {
 
 .paddingFr {
     display: flex;
+    padding-left: 30px;
 }
 
-.paddingFr {
-    opacity: 0.8;
-
+.paddingFr input {
+    /* opacity agit sur tt */
+    background:rgba(250, 250, 250, 0);
+    border: none;
 }
 
 
